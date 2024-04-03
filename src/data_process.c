@@ -74,12 +74,6 @@ int priority(char operator) {
     int flag;
     switch (operator) {
         case '(':
-        case 'S':
-        case 's':
-        case 'C':
-        case 'c':
-        case 'l':
-        case 't':
             flag = 0;
             break;
         case ')':
@@ -92,6 +86,14 @@ int priority(char operator) {
         case '*':
         case '/':
             flag = 3;
+            break;
+        case 'S':
+        case 's':
+        case 'C':
+        case 'c':
+        case 'l':
+        case 't':
+            flag = 4;
             break;
         default:
             flag = -1;
